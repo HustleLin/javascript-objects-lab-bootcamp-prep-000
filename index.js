@@ -15,6 +15,12 @@ function deleteFromObjectByKey(obj, key, value) {
   return recipes;
 }
 
-// function destructivelyDeleteFromObjectByKey(obj, key, value) {
-//  Object.
-//}
+function destructivelyDeleteFromObjectByKey(obj, key, value) {
+  var obj = { foo: 'bar' }
+
+  var newObj = Object.assign({}, obj)
+
+  newObj // { foo: 'bar' }
+
+  delete newObj.foo // true
+}
